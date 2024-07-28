@@ -13,7 +13,7 @@ def write_the_json_file(data, name):
 
 
 def process(city):
-    total = 1000000
+    total = 5
 
     slug = check_file_json_exists(city)
 
@@ -63,7 +63,7 @@ def process(city):
                     print(f"Currently Scrapped: ", data.count())
 
         page.locator(
-            '//button[@jsaction="focus:zoom.onZoomInFocus;mouseover:zoom.onZoomInPointerIn;zoom.onZoomInClick;keydown:zoom.keydownAndRipple;ptrdown:ripple.play;mousedown:ripple.play"]').click(
+            '//button[contains(@jsaction, "focus:zoom.onZoomInFocus")]').click(
             click_count=15)
         page.wait_for_timeout(2000)
 
