@@ -1,6 +1,5 @@
 from playwright.sync_api import sync_playwright
 from slugify import slugify
-import mysql.connector
 import os.path
 import json, io
 
